@@ -1,0 +1,29 @@
+#app {
+    width: 100%;
+}
+
+#header {
+    background: transparent url("/images/header.jpg") repeat-x center center;
+    height: 100px;
+}
+
+#nav {
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    height: 40px;
+    a {
+        display: inline-block;
+        padding: 10px 20px 5px;
+    }
+}
+
+#main {
+    min-height: calc(100vh - 220px);
+}
+
+#footer {
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding-top: 10px;
+    height: 40px;
+}
