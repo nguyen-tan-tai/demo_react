@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './home/Home.tsx'
-import Galaries from './galaries/Galaries.tsx'
-import Contact from './contact/Contact.tsx'
+import Dashboard from './dashboard/Dashboard.tsx'
+import SectorList from './sector/SectorList.tsx'
+import CompanyList from './company/CompanyList.tsx'
 import ErrorBoundary from './error/ErrorBoundary.tsx'
 import './App.scss'
 
@@ -12,18 +12,17 @@ function App() {
             v7_relativeSplatPath: true,
         }}>
             <div id='app'>
-                <header id='header'></header>
                 <nav id='nav'>
-                    <Link to='/home' className='mr-4'>Home</Link>
-                    <Link to='/galaries' className='mr-4'>Galaries</Link>
-                    <Link to='/contact'>Contact</Link>
+                    <Link to='/' className='mr-4'>Dashboard</Link>
+                    <Link to='/sector/list'>Sector list</Link>
+                    <Link to='/company/list'>Company list</Link>
                 </nav>
                 <div id='main'>
                     <ErrorBoundary fallback="OK">
                         <Routes>
-                            <Route path='/home' element={<Home />} />
-                            <Route path='/galaries' element={<Galaries />} />
-                            <Route path='/contact' element={<Contact />} />
+                            <Route path='/' element={<Dashboard />} />
+                            <Route path='/sector/list' element={<SectorList />} />
+                            <Route path='/company/list' element={<CompanyList />} />
                         </Routes>
                     </ErrorBoundary>
                 </div>

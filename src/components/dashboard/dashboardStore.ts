@@ -1,12 +1,12 @@
 import { create } from 'zustand';
 
-interface HomeState {
+interface DashboardState {
     count: number;
     increment: () => void;
     decrement: () => void;
 }
 
-export const useHomeStore = create<HomeState>((set) => ({
+export const useDashboardStore = create<DashboardState>((set) => ({
     count: 0,
     increment: () => set((state) => ({ count: state.count + 1 })),
     decrement: () => set((state) => ({ count: state.count - 1 })),
