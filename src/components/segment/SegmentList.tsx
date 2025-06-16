@@ -1,11 +1,10 @@
-interface SegmentListProps {
-    name: string;
-}
+import Checkbox from '../ui/Checkbox';
+import './SegmentList.scss'
 
-function SegmentList({ name }: SegmentListProps) {
+function SegmentList() {
     return <div id="segment-list">
-        <h1>Company</h1>
-        <p>Company name: {name}</p>
+        <h1>Segment list</h1>
+        <Checkbox />
     </div>;
 }
 

@@ -1,4 +1,3 @@
-import { Button } from '../ui/button';
 import { useDashboardStore } from './dashboardStore';
 
 function Dashboard() {
@@ -8,8 +7,8 @@ function Dashboard() {
         <div id="dashboard">
             <h1>Home</h1>
             <p>Count: {count}</p>
-            <Button onClick={increment}>Increment</Button>
-            <Button onClick={decrement}>Decrement</Button>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
         </div>
     );
 }
