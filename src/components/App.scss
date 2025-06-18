@@ -125,10 +125,10 @@ body {
     background-color: $gray-900;
     color: $white;
     line-height: 32px;
+    background-color: black;
 
     .logo {
         flex-grow: 1;
-        background: url('/images/logo.jpg') no-repeat left center;
     }
 
     .user {
@@ -141,59 +141,85 @@ body {
         }
     }
 
+    .menu-toggle-button {
+        padding: 2px;
+        button {
+            background: none;
+            border: none;
+            padding: 5px;
+            color: $white;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 
 #main {
-    min-height: calc(100vh - 100px);
-    padding: 10px;
+    min-height: calc(100vh - 80px);
     display: block;
 }
 
 #menu {
     display: none;
+    background-color: $black;
+    width: 200px;
+    padding: 5px;
 }
 
 #main-content {
     display: block;
+    padding: 5px 10px;
 }
 
 #main.menu-open {
     display: flex;
 
     #menu {
-        display: flex;
+        display: block;
     }
 
     #main-content {
-        display: flex;
         flex: 1;
     }
 }
 
-#menu nav {
-    ul {
+#menu {
+    ol {
         margin: 0;
-        padding: 5px;
-        border-top: 1px solid $border-color;
-        border-bottom: 1px solid $border-color;
+        padding: 0;
 
         li {
             list-style: none;
-            display: inline-block;
-            margin: 2px;
-            padding: 0;
+            display: block;
+            margin: 0;
 
             a {
                 display: block;
-                padding: 6px 20px;
+                padding: 0;
+            }
 
-                &.active {
-                    border: 2px solid $primary;
-                    padding: 4px 18px;
-                    border-radius: 5px;
+            span {
+                display: block;
+                padding: 5px;
+                line-height: 32px;
+                color: $white;
+            }
+
+            &.menu-level-1 {
+                span {
+                    padding: 5px 8px;
                 }
             }
+
+            &.menu-level-2 {
+                span {
+                    padding: 5px 8px 5px 20px;
+                }
+            }
+
         }
     }
 }

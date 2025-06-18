@@ -1,0 +1,25 @@
+{
+    "website": {
+        "name": "React",
+        "part2": "😉"
+    },
+    "dashboard": {
+        "title": "Dashboard"
+    },
+    "menu": {
+        "dashboard": {
+            "title": "Dashboard"
+        },
+        "segment": {
+            "group": {
+                "title": "Segment"
+            },
+            "list": {
+                "title": "Segment list"
+            },
+            "create": {
+                "title": "Create segment"
+            }
+        }
+    }
+}
